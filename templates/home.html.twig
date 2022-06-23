@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}HOME!
+{% endblock %}
+
+{% block body %}
+	<div>
+		<div class="flex">
+			<div></div>
+			<a href="{{asset('/results')}}">
+				<button class="results-button">Histora testów</button>
+			</a>
+		</div>
+		<h1 class="title">Country Flashcards</h1>
+		<div class="contener">
+			<a href="{{asset('/flagGame')}}">
+				<button class="home-button">FLAGI</button>
+			</a>
+			<a href="{{asset('/capitalGame')}}">
+				<button class="home-button">STOLICE</button>
+			</a>
+		</div>
+	</div>
+{% endblock %}

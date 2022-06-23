@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}WSZYSTKIE WYNIKI!
+{% endblock %}
+
+{% block body %}
+	<div class="contener2">
+		<div>
+			<a href="/"><span id="home" class="material-symbols-outlined">home</span></a>
+		</div>
+		<div>
+			<form method="post" action="/results/filtr">
+				<label for="from">OD:</label>
+				<input class="date" type="date" id="from" name="from" {% if from is defined %} value={{from}} {% endif %}>
+
+				<label for="to">DO:</label>
+				<input class="date" type="date" id="to" name="to" {% if to is defined %} value={{to}} {% endif %}>
+
+				<button class="filtr-button" type="submit">Filtruj</button>
+             </form>
+		</div>
+	</div>
+	<table>
+		<thead>
+			<tr>
+				<th>DATA</th>
+				<th>GRA</th>
+				<th>POPRAWNE ODPOWIEDZI</th>
+				<th>NIEPOPRAWNE OPDPOWIEDZI</th>
+			</tr>
+		</thead>
+		<thead></thead>
+		<tbody>
+			{% for result in results %}
+				<tr>
+					<td>{{result.date|format_datetime(timeFormat='short',locale='en')}}</td>
+					<td>
+						{% if result.type=="flag" %}
+							FLAGI
+						{% else %}
+							STOLICE
+						{% endif %}
+					</td>
+					<td>{{result.positive}}</td>
+					<td>{{result.negative}}</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+
+{% endblock %}

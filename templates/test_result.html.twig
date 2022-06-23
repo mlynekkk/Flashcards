@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}WYNIK!
+{% endblock %}
+
+{% block body %}
+    <div class="contener2">
+		<a href="/"><span id="home" class="material-symbols-outlined">home</span></a>
+	</div>
+	<h1 class="questions">
+		{% if pos>=5 %}
+			IDEALNY WINIK!
+		{% elseif pos>=3 %}
+			TAK TRZYMAJ!
+		{% else %}
+			NASTĘPNYM RAZEM BĘDZIE LEPIEJ!
+		{% endif %}
+	</h1>
+	<div class="result-one">
+		<div class="border-good">
+			<h3 class="font">DOBRZE</h3>
+			<h4>{{pos}}</h4>
+		</div>
+
+		<div class="border-bad">
+			<h3 class="font">ŹLE</h3>
+			<h4>{{neg}}</h4>
+		</div>
+	</div>
+	<div class="center">
+		<a href="{{asset('/results')}}">
+			<button class="all-results-button">WSZYSTKIE WYNIKI</button>
+		</a>
+	</div>
+{% endblock %}

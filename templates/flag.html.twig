@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}FLAGI!{% endblock %}
+
+{% block body %}
+	<div class="contener2">
+		<a href="/"><span id="home" class="material-symbols-outlined">home</span></a>
+	</div>
+	<div>
+		<h1 class="questions">Do jakiego kraju należy dana flaga?</h1>
+		{% if pos==0 and neg==0 %}
+		<button class="start-button" id="startID" onclick="myFunctionStart()">START</button>
+		<div id="card">
+		{% else %}
+		<div id="card2">
+		{% endif %}
+			<img class="img" src="{{asset(country.flag)}}">
+			<button class="check-button" id="checkID" onclick="myFunctionCheck()">SPRAWDŹ</button>
+			<div id="result">
+				<h2 class="answer">{{country.name}}</h2>
+				<div class="contener">
+					{% if pos+neg<4 %}
+					<form method="post" action="/flagGame/nextQuestion">
+					{% else %}
+					<form method="post" action="/testResult/add">
+						<input type="hidden" name="type" value="flag">
+					{% endif %}
+						<input type="hidden" name="pos" value="{{pos+1}}">
+						<input type="hidden" name="neg" value="{{neg}}">
+						<button class="positive-button" type="submit">POPRAWNIE</button>
+					</form>
+					{% if pos+neg<4 %}
+					<form method="post" action="/flagGame/nextQuestion">
+					{% else %}
+					<form method="post" action="/testResult/add">
+						<input type="hidden" name="type" value="flag">
+					{% endif %}
+						<input type="hidden" name="neg" value="{{neg+1}}">
+						<input type="hidden" name="pos" value="{{pos}}">
+						<button class="negative-button" type="submit">NIEPOPRAWNIE</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,102 @@
+/*!**************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[1].use[1]!./assets/styles/app.css ***!
+  \**************************************************************************************************************/
+
+  body {
+    background: -webkit-gradient(linear, left top, left bottom, from(#ffa1e0), to(#fff564)) fixed;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 2;
+    margin-top: 10%;
+}
+
+
+
+h1 {
+    font-size: 80px;
+}
+
+.content{
+  background: white;
+  border-radius: 15px;
+  margin: auto;
+  width: 70vw;
+  padding: 3em;
+  box-shadow: 0 0 3em rgb(0, 0, 0, 0.15);
+}
+
+.title{
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffd900;
+}
+
+.contener{
+  display: flex;
+  justify-content: space-around;
+}
+
+a{
+  text-decoration: none;
+}
+
+
+
+.home-button{
+  height: 15rem;
+  width: 30rem;
+  padding: 10px;
+  border-radius: 50px;
+  background: #ffa1e0;
+  color: white;
+  text-align: center;
+  
+  font-weight: bold;
+  font-size: 50px;
+  cursor: pointer;
+  border: none;
+  margin: 50px auto;
+  display: block;
+}
+
+.home-button:hover{
+  background: white;
+  color:#ffa1e0;
+  border: solid 5px #ffa1e0;
+
+}
+
+.results-button{
+  height: 10rem;
+  width: 20rem;
+  padding: 10px;
+  border-radius: 50px;
+  background: #ffa1e0;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 50px;
+  cursor: pointer;
+  border: none;
+  margin: 50px auto;
+  display: block;
+}
+
+.results-button:hover{
+  background: white;
+  color:#ffa1e0;
+  border: solid 5px #ffa1e0;
+
+}
+
+div#card{
+  display: none;
+}
+
+div#result{
+  display: none;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYXBwLmNzcyIsIm1hcHBpbmdzIjoiOzs7QUFBQTtJQUNJLDJCQUEyQjtBQUMvQjs7QUFFQTtJQUNJLGdCQUFnQjtBQUNwQiIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL2Fzc2V0cy9zdHlsZXMvYXBwLmNzcyJdLCJzb3VyY2VzQ29udGVudCI6WyJib2R5IHtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiBsaWdodGdyYXk7XG59XG5cbmgxIHtcbiAgICBmb250LXNpemU6IGxhcmdlO1xufVxuIl0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9*/

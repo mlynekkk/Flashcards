@@ -1,0 +1,85 @@
+# This file is the entry point to configure your own services.
+# Files in the packages/ subdirectory configure your dependencies.
+
+# Put parameters here that don't need to change on each machine where the app is deployed
+# https://symfony.com/doc/current/best_practices.html#use-parameters-for-application-configuration
+parameters:
+        countries: 
+            - 
+                name: Polska 
+                capital: Warszawa
+                flag: /images/poland.svg
+            - 
+                name: Niemcy
+                capital: Berlin
+                flag: /images/germany.svg
+            - 
+                name: Irlandia
+                capital: Dublin
+                flag: /images/ireland.svg
+            - 
+                name: Hiszpania
+                capital: Madryt
+                flag: /images/spain.svg
+            - 
+                name: Norwegia
+                capital: Oslo
+                flag: /images/norway.svg
+            - 
+                name: Turcja
+                capital: Ankara
+                flag: /images/turkey.svg
+            - 
+                name: Wietnam
+                capital: Hanoi
+                flag: /images/vietnam.svg
+            - 
+                name: Tajlandia
+                capital: Bangkok
+                flag: /images/thailand.svg
+            - 
+                name: Indonezja
+                capital: Dżakarta
+                flag: /images/indonesia.svg
+            - 
+                name: Japonia
+                capital: Tokio
+                flag: /images/japan.svg
+            - 
+                name: Sudan
+                capital: Chartum
+                flag: /images/sudan.svg
+            - 
+                name: Nigeria
+                capital: Abudża
+                flag: /images/nigeria.svg
+            - 
+                name: Zambia
+                capital: Lusaka
+                flag: /images/zambia.svg
+            - 
+                name: Kanada
+                capital: Ottawa
+                flag: /images/canada.svg
+            - 
+                name: Jamajka
+                capital: Kingston
+                flag: /images/jamaica.svg
+
+services:
+    # default configuration for services in *this* file
+    _defaults:
+        autowire: true      # Automatically injects dependencies in your services.
+        autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+
+    # makes classes in src/ available to be used as services
+    # this creates a service per class whose id is the fully-qualified class name
+    App\:
+        resource: '../src/'
+        exclude:
+            - '../src/DependencyInjection/'
+            - '../src/Entity/'
+            - '../src/Kernel.php'
+
+    # add more service definitions when explicit configuration is needed
+    # please note that last definitions always *replace* previous ones
